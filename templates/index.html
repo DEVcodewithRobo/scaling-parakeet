@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Styles.css') }}">
+
+</head>
+<body style="background-image: url('{{ url_for('static', filename='svgs/back.jpg') }}');" id="body">
+
+    <!-- header -->
+
+    <header>
+        <div class="overall">
+            <div class="nav">
+                <div class="navlogo">
+                    <img src="{{ url_for('static', filename='svgs/sur.png') }}" alt="LA" id="ico">
+                </div>
+               
+            </div>
+            <div class="title">
+                <div class="heading">
+                    <h1><u>WELCOME TO THE SURVEY!</u></h1>
+                </div>
+            </div>
+            <div class="flexbox-container">
+                <div class="flexbox">
+                    <p>
+                        Our mission is to bring the convenience of an online ear exam to you.
+                        By participating in this survey, you are actively contributing to a solution
+                        that will empower you to understand and safeguard your hearing health. This online
+                        hearing test does not replace a visit to a hearing care professional and it does not
+                        constitute a medical diagnosis. If you think that you are experiencing hearing loss,
+                        we advise you to consult a professional hearing care specialist.
+                    </p>
+                    <a href="#sf" class="redirect-button">Take the Survey</a>
+                </div>
+            </div>            
+        </div>
+    </header>
+
+
+
+<!-- section -->
+
+    <section class="survey-form" id="sf">
+        <h2>Survey Form</h2>
+        <form action="/submit" method="post">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span class="age-limit-message" style="color: rgb(78, 6, 6);">(Note: Ages above 100 are not recommended.)</span>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+
+
+        <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 20px; padding: 8px; margin: 8px 0;"><u>Let's Start...</u></p>
+
+        <label for="audioQuestion1">Q1. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion1">
+            <source src="fal/1(-10dB).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb0a" name="a1" value="unable_to_hear">
+            <label for="fb0a">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb0b" name="a1" value="just_started_hearing">
+            <label for="fb0b">I just started hearing</label><br>
+
+            <input type="radio" id="fb0c" name="a1" value="sound_fine">
+            <label for="fb0c">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb0d" name="a1" value="unbearable_pitch">
+            <label for="fb0d">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q2 -->
+        <label for="audioQuestion2">Q2. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion2">
+            <source src="fal/2(-5dB).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb1x" name="a2" value="unable_to_hear">
+            <label for="fb1x">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb1a" name="a2" value="just_started_hearing">
+            <label for="fb1a">I just started hearing</label><br>
+
+            <input type="radio" id="fb1b" name="a2" value="sound_fine">
+            <label for="fb1b">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb1c" name="a2" value="unbearable_pitch">
+            <label for="fb1c">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q3 -->
+        <label for="audioQuestion3">Q3. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion3">
+            <source src="fal/3 - NORMAL.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb2w" name="a3" value="unable_to_hear">
+            <label for="fb2w">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb2d" name="a3" value="just_started_hearing">
+            <label for="fb2d">I just started hearing</label><br>
+
+            <input type="radio" id="fb2e" name="a3" value="sound_fine">
+            <label for="fb2e">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb2f" name="a3" value="unbearable_pitch">
+            <label for="fb2f">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q4 -->
+        <label for="audioQuestion4">Q4. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion4">
+            <source src="fal/4( 10 dB).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb3v" name="a4" value="unable_to_hear">
+            <label for="fb3v">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb3g" name="a4" value="just_started_hearing">
+            <label for="fb3g">I just started hearing</label><br>
+
+            <input type="radio" id="fb3h" name="a4" value="sound_fine">
+            <label for="fb3h">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb3i" name="a4" value="unbearable_pitch">
+            <label for="fb3i">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q5 -->
+        <label for="audioQuestion5">Q5. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion5">
+            <source src="fal/5 (15dB).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb4u" name="a5" value="unable_to_hear">
+            <label for="fb4u">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb4j" name="a5" value="just_started_hearing">
+            <label for="fb4j">I just started hearing</label><br>
+
+            <input type="radio" id="fb4k" name="a5" value="sound_fine">
+            <label for="fb4k">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb4l" name="a5" value="unbearable_pitch">
+            <label for="fb4l">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q6 -->
+        <label for="audioQuestion6">Q6. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion6">
+            <source src="fal/6 (20dB).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb5t" name="a6" value="unable_to_hear">
+            <label for="fb5t">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb5m" name="a6" value="just_started_hearing">
+            <label for="fb5m">I just started hearing</label><br>
+
+            <input type="radio" id="fb5n" name="a6" value="sound_fine">
+            <label for="fb5n">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb5o" name="a6" value="unbearable_pitch">
+            <label for="fb5o">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <!-- Q7 -->
+        <label for="audioQuestion7">Q7. Listen to the following audio and provide your feedback:</label>
+        <audio controls id="audioQuestion7">
+            <source src="fal/7.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <label>Choose among below</label>
+        <div>
+            <input type="radio" id="fb6s" name="a7" value="unable_to_hear">
+            <label for="fb6s">I am unable to hear.</label><br>
+
+            <input type="radio" id="fb6p" name="a7" value="just_started_hearing">
+            <label for="fb6p">I just started hearing</label><br>
+
+            <input type="radio" id="fb6q" name="a7" value="sound_fine">
+            <label for="fb6q">Sound is Fine to me!</label><br>
+
+            <input type="radio" id="fb6r" name="a7" value="unbearable_pitch">
+            <label for="fb6r">Arghh!! Unbearable pitch!</label><br>
+        </div>
+
+        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; padding: 8px; margin: 8px 0; color: rgb(78,6,6); text-align: center;"><u>This is a demo!!</u></p>
+        
+
+            <label for="feedback" id="fd">Hey! Pls leave a Reveiw: </label>
+            <textarea id="feedback" name="review" rows="4" required></textarea>
+        
+        
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Demo Survey. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
